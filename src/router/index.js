@@ -39,7 +39,6 @@ const routes = [
     path: "/profile",
     name: "profile",
     component: Profile,
-    props: { isUserLogged: true }
   },
   {
     path: "/register",
@@ -48,9 +47,8 @@ const routes = [
   },
   {
     path: "/roadmap",
-    name: "Roadmap",
+    name: "roadmap",
     component: Roadmap,
-    props: { isUserLogged: true }
   },
   {
     path: "/success-cases",
@@ -61,37 +59,31 @@ const routes = [
     path: "/trainings",
     name: "trainings",
     component: Trainings,
-    props: { isUserLogged: true }
   },
   {
     path: "/trainings-corp",
     name: "trainings-corp",
     component: TrainingsCorp,
-    props: { isCorpLogged: true }
   },
   {
     path: "/job-vacancy-list",
     name: "job-vacancy-list",
     component: JobVacancyList,
-    props: { isUserLogged: true }
   },
   {
     path: "/job-vacancy-search",
     name: "job-vacancy-search",
     component: JobVacancySearch,
-    props: { isCorpLogged: true }
   },
   {
     path: '/job-vacancy-registration',
     name: 'job-vacancy-registration',
     component: JobVacancyRegistration,
-    props: { isCorpLogged: true }
   },
   {
     path: '/mentoring',
     name: 'mentoring',
     component: Mentoring,
-    props: { isCorpLogged: true }
   }
 ]
 

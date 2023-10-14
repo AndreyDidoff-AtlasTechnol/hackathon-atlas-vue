@@ -5,7 +5,7 @@
       v-for="(topic, index) in data"
       :key="`roadmap-topic-${index}`"
     >
-      <p style="font-weight: 600">{{ topic.title }}</p>
+      <p class="topic__title">{{ topic.title }}</p>
 
       <button
         v-for="(item, index) in topic.items"
@@ -37,25 +37,26 @@ export default {
 
 <style lang="scss" scoped>
 .topic {
-  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
 
   &__title {
     font-weight: 600;
   }
 
   button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 12px;
     background-color: #702FC2;
-    border-radius: 4px;
-    cursor: pointer;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
+    padding: 10px 20px;
+    width: 100%;
 
     span {
-      font-weight: 500;
-      font-size: 15px;
+      font-weight: 600;
+      font-size: 16px;
       color: #FFF;
     }
 

@@ -2,25 +2,19 @@
     <nav>
         <ul>
             <router-link
-                to="roadmap"
-                @click="$emit('toggle-menu')"
-            >
-                <li>RoadMap</li>
-            </router-link>
-            <router-link
                 to="trainings-corp"
                 @click="$emit('toggle-menu')"
             >
                 <li>Treinamentos</li>
             </router-link>
             <router-link
-                to="vacancy"
+                to="job-vacancy-registration"
                 @click="$emit('toggle-menu')"
             >
                 <li>Cadastrar vaga</li>
             </router-link>
             <router-link
-                to="vacancies"
+                to="job-vacancy-list"
                 @click="$emit('toggle-menu')"
             >
                 <li>Vagas</li>
@@ -29,7 +23,7 @@
         
         <router-link
             class="logout"
-            to="home"
+            to="/"
             @click="$emit('toggle-menu')"
         >
             Sair

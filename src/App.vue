@@ -31,21 +31,36 @@ import FooterDiversificaJobs from './components/FooterDiversificaJobs.vue'
 
 export default {
   name: 'App',
-  props:{
-    isCorpLogged:{
-      type: Boolean,
-      default: false
-    },
-    isUserLogged:{
-      type: Boolean,
-      default: false
-    },
-  },
   components: {
     FooterDiversificaJobs,
     navDefault,
     navCorp,
     navUser
+  },
+  computed: {
+    isCorpLogged() {
+      let route = this.$route.name
+
+      if(
+        route === 'job-vacancy-registration'
+        || route === 'trainings-corp'){
+        return true
+      }
+
+      return false
+    },
+    isUserLogged() {
+      let route = this.$route.name
+
+      if(
+        route === 'job-vacancy-list'
+        || route === 'job-vacancy-search'
+        || route === 'roadmap'
+        || route === 'profile'){
+        return true
+      }
+      return false
+    }
   },
   methods:{
     toggleMenu() {
