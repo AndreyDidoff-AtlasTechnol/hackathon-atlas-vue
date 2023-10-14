@@ -32,6 +32,6 @@
 
 <script>
 export default {
-  name: 'job-vacancy',
+  name: 'job-vacancy-search',
 }
 </script>

@@ -9,7 +9,7 @@ import Roadmap from "@/pages/Roadmap.vue"
 import SuccessCases from "@/pages/SuccessCases.vue"
 import Trainings from "@/pages/Trainings.vue"
 import TrainingsCorp from "@/pages/TrainingsCorp.vue"
-import Vacancies from "@/pages/Vacancies.vue"
+import JobVacancyList from "@/pages/JobVacancyList.vue"
 import JobVacancySearch from "@/pages/JobVacancySearch.vue"
 import JobVacancyRegistration from "@/pages/JobVacancyRegistration.vue"
 
@@ -69,9 +69,9 @@ const routes = [
     props: { isCorpLogged: true }
   },
   {
-    path: "/vacancies",
-    name: "vacancies",
-    component: Vacancies,
+    path: "/job-vacancy-list",
+    name: "job-vacancy-list",
+    component: JobVacancyList,
     props: { isUserLogged: true }
   },
   {
