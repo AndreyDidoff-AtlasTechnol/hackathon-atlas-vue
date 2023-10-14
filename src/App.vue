@@ -81,11 +81,19 @@ a {
   color: inherit;
 }
 
-input, select {
+input, select, textarea {
   width: 100%;
   height: 40px;
-  padding: 0 12px;
+  padding: 12px;
   margin-bottom: 16px;
+}
+
+textarea {
+  max-width: 100%;
+  min-width: 100%;
+  height: 100px;
+  min-height: 100px;
+  max-height: 200px;
 }
 
 h2{
