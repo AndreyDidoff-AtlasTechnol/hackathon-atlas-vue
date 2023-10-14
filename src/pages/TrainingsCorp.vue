@@ -1,13 +1,16 @@
 <template>
   <section class="section">
-  <h2 class="title">Mentoria para seus funcionários </h2>
-  <div class="content">
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    <br /><br />
-    <h3 class="subtitle">Sequência de estudos</h3>
-    <roadmap :data="roadmapList" />
-  </div>
-</section>
+    <h2 class="title">Mentoria para seus funcionários </h2>
+
+    <div class="content">
+      <p>Esse é um guia estratégico que visa aprimorar as habilidades e o crescimento profissional de colaboradores dentro de uma organização. Ele proporciona um caminho claro para a implementação de programas de mentoria eficazes que resultam em funcionários mais engajados, confiantes e capazes de alcançar todo o seu potencial.
+      </p>
+
+      <h3 class="subtitle">Sequência de estudos</h3>
+      
+      <roadmap :data="roadmapList" />
+    </div>
+  </section>
 </template>
 
 <script>
