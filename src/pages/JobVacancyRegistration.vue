@@ -4,16 +4,18 @@
   <div class="content">
     <form>
       <select>
-        <option selected>Essa vaga é destinada à...</option>
-        <option>...</option>
-        <option>...</option>
+        <option value="" disabled selected>Essa vaga é destinada a ...</option>
+        <option value="1">Afirmativa negros</option>
+        <option value="2">Afirmativa LGBTQIA+</option>
+        <option value="3">Afirmativa mulheres</option>
+        <option value="4">Todos</option>
       </select>
 
       <textarea placeholder="Descrição da vaga"></textarea>
 
-      <input type="email" placeholder="Tecnologias..." />
+      <input type="text" placeholder="Tecnologias..." />
 
-      <input type="password" placeholder="Valor da vaga..." />
+      <input type="text" placeholder="Valor da vaga..." />
 
       <button
         type="button"
