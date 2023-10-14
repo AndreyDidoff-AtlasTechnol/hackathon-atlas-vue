@@ -104,18 +104,16 @@ h3 {
   font-weight: 600;
 }
 
-button {
-}
-
 header {
   min-height: 64px;
   padding: 12px 24px;
   background-color: #702FC2;
-  position: relative;
+  position: sticky;
   display: flex;
   gap: 40px;
   justify-content: center;
   align-items: center;
+  top: 0;
 
   .logo {
     width: 120px;
@@ -138,6 +136,8 @@ header {
     overflow: hidden;
     cursor: pointer;
     z-index: 9999;
+    background: none;
+    border: none;
 
     @media (min-width: 960px) {
       display: none;
