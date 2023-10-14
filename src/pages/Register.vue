@@ -3,51 +3,55 @@
   <h2 class="title">Registro</h2>
   <div class="content">
     <form>
-      <select id="identification">
+      <select id="identification" @change="setIsCorp($event)">
         <option selected>Eu sou...</option>
         <option value="candidate">Candidato</option>
         <option value="company">Empresa</option>
       </select>
 
       <input
-        class="only-company-option"
-        style="display: none"
+        v-if="isCorp"
         type="text"
-        placeholder="Digite o nome da empresa"
+        placeholder="O nome da empresa é ..."
       />
 
-      <input type="text" placeholder="Digite seu nome" />
+      <input type="text" placeholder="Meu nome é ..." />
 
       <input
-        class="only-company-option"
-        style="display: none"
+        v-if="isCorp"
         type="text"
-        placeholder="Digite seu cargo"
+        placeholder="Meu cargo é ..."
       />
 
-      <input type="email" placeholder="Digite seu e-mail" />
+      <input type="email" placeholder="Qual o seu e-mail?" />
 
       <select>
-        <option selected>Você se considera...</option>
-        <option>Homem</option>
-        <option>Mulher</option>
-        <option>Outro</option>
+        <option value="" selected>Você se considera...</option>
+        <option value="1">Mulher</option>
+        <option value="2">Homem</option>
+        <option value="3">Outro</option>
       </select>
 
       <input type="text" placeholder="Digite como você se identifica" />
 
-      <input type="text" placeholder="Digite seu linkedin" />
+      <input
+        v-if="!isCorp"
+        type="text"
+        placeholder="Digite seu linkedin"
+      />
 
-      <button
-        type="button"
-        style="margin-bottom: 12px"
-      >
-        Cadastrar
-      </button>
+      <fieldset>
+        <router-link
+        class="cta"
+        :to="getUrl"
+        >
+          Cadastrar
+        </router-link>
 
-      <router-link to="login">
-        Já sou cadastrado
-      </router-link>
+        <router-link to="login">
+          Já sou cadastrado
+        </router-link>
+      </fieldset>
     </form>
   </div>
 </section>
@@ -55,6 +59,34 @@
 
 <script>
 export default {
-  name: 'register'
+  name: 'register',
+  data(){
+    return {
+      isCorp: false
+    }
+  },
+  computed:{
+    getUrl(){
+      return this.isCorp ?'trainings-corp':'trainings'
+    }
+  },
+  methods:{
+    setIsCorp(event){
+      console.log(event.target.value)
+      let value = event.target.value
+      this.isCorp = (value == 'company' ? true : false);
+    }
+  }
 }
 </script>
+
+<style lang="scss" scoped>
+  fieldset{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    .cta{
+      margin-top: 0;
+    }
+  }
+</style>

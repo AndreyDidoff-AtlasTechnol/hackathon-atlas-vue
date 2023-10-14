@@ -82,10 +82,12 @@ a {
 }
 
 input, select, textarea {
+  border: 2px solid #5A1CAE;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
   width: 100%;
-  height: 40px;
-  padding: 12px;
-  margin-bottom: 16px;
 }
 
 textarea {
