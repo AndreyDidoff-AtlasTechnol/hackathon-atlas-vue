@@ -23,12 +23,13 @@
       <li>Apoio e Recursos: As empresas com o Selo DiversificaJobs têm acesso a uma rede exclusiva de apoio e recursos, incluindo compartilhamento de melhores práticas e eventos para o desenvolvimento contínuo de políticas de diversidade e inclusão.</li>
     </ul>
   </div>
-  <button
+  
+  <router-link
     class="cta"
-    type="button"
-  >
-    Quero um job inclusivo
-  </button>
+    to="register"
+    >
+      Quero um selo DiversificaJobs
+  </router-link>
 </section>
 </template>
 

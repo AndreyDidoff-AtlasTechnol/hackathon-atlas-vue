@@ -35,12 +35,12 @@
       <p>Front-end com foco em Vue.Js</p>
     </div>
   </div>
-  <button
+  <router-link
     class="cta"
-    type="button"
-  >
-    Quero contratar o Jorge Alex
-  </button>
+    to="#"
+    >
+      Quero contratar o Jorge Alex
+  </router-link>
 </section>
 </template>
 
