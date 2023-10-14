@@ -1,27 +1,27 @@
 <template>
     <nav>
         <ul>
-            <a href="/">
+            <router-link to="/">
                 <li>Início</li>
-            </a>
-            <a href="trainings">
+            </router-link>
+            <router-link to="trainings">
                 <li>Treinamentos</li>
-            </a>
-            <a href="how-it-works">
+            </router-link>
+            <router-link to="how-it-works">
                 <li>Como funciona?</li>
-            </a>
-            <a href="success-cases">
+            </router-link>
+            <router-link to="success-cases">
                 <li>Cases de sucesso</li>
-            </a>
-            <a href="badge-diversifica-jobs">
+            </router-link>
+            <router-link to="badge-diversifica-jobs">
                 <li>Selo DiversificaJobs</li>
-            </a>
+            </router-link>
         </ul>
-        <a href="login">
+        <router-link to="login">
             <button class="without-custom" type="button">
                 Quero entrar
             </button>
-        </a>
+        </router-link>
     </nav>
 </template>
 

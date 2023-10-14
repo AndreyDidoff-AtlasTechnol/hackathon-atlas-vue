@@ -1,24 +1,24 @@
 <template>
     <nav>
         <ul>
-            <a href="roadmap">
+            <router-link to="roadmap">
                 <li>RoadMap</li>
-            </a>
-            <a href="trainings-corp">
+            </router-link>
+            <router-link to="trainings-corp">
                 <li>Treinamentos</li>
-            </a>
-            <a href="vacancy">
+            </router-link>
+            <router-link to="vacancy">
                 <li>Cadastrar vaga</li>
-            </a>
-            <a href="vacancies">
+            </router-link>
+            <router-link to="vacancies">
                 <li>Vagas</li>
-            </a>
+            </router-link>
         </ul>
-        <a href="home">
+        <router-link to="home">
             <button class="without-custom" type="button">
                 Sair
             </button>
-        </a>
+        </router-link>
     </nav>
 </template>
 

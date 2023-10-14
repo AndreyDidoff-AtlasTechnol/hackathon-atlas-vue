@@ -45,9 +45,9 @@
         Cadastrar
       </button>
 
-      <a href="login">
+      <router-link to="login">
         Já sou cadastrado
-      </a>
+      </router-link>
     </form>
   </div>
 </section>
