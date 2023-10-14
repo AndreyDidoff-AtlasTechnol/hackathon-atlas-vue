@@ -19,7 +19,7 @@
       <nav-default v-else @toggle-menu="toggleMenu"></nav-default>
     </header>
     <router-view />
-    <footer-diversifica-jobs v-if="noShowFooter" />
+    <footer-diversifica-jobs v-if="noShowFooter" :color="footerColor" />
   </main>
 </template>
 
@@ -76,7 +76,15 @@ export default {
         return false
       }
       return true
+    },
+    footerColor(){
+      let route = this.$route.name
 
+      if(
+        route === 'badge-diversifica-jobs'){
+        return 'white'
+      }
+      return 'purple'
     }
   },
   methods:{

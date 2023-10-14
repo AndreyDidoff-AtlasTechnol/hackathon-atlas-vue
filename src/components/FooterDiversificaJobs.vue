@@ -1,6 +1,6 @@
 <template>
     <footer>
-      <section class="section purple" id="companiesWithDiversificaJobsBadge">
+      <section class="section" :class="color" id="companiesWithDiversificaJobsBadge">
         <h2 class="title">Empresas com selo DiversificaJobs</h2>
         <div class="content">
           <div class="badges">
@@ -36,7 +36,13 @@
 
 <script>
     export default {
-        name: 'footer-diversifica-jobs'
+        name: 'footer-diversifica-jobs',
+        props:{
+          color:{
+            type: String,
+            default: 'purple'
+          }
+        }
     }
 </script>
 
@@ -50,6 +56,7 @@
   .badge{
     width: 100px;
     height: 100px;
+    border: 2px solid #5A1CAE;;
     border-radius: 50px;
     background: #fff;
     padding: 25px 5px;
