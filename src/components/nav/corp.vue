@@ -1,30 +1,45 @@
 <template>
     <nav>
         <ul>
-            <router-link to="roadmap">
+            <router-link
+                to="roadmap"
+                @click="$emit('toggle-menu')"
+            >
                 <li>RoadMap</li>
             </router-link>
-            <router-link to="trainings-corp">
+            <router-link
+                to="trainings-corp"
+                @click="$emit('toggle-menu')"
+            >
                 <li>Treinamentos</li>
             </router-link>
-            <router-link to="vacancy">
+            <router-link
+                to="vacancy"
+                @click="$emit('toggle-menu')"
+            >
                 <li>Cadastrar vaga</li>
             </router-link>
-            <router-link to="vacancies">
+            <router-link
+                to="vacancies"
+                @click="$emit('toggle-menu')"
+            >
                 <li>Vagas</li>
             </router-link>
         </ul>
         
-      <router-link class="logout" to="home">Sair</router-link>
+        <router-link
+            class="logout"
+            to="home"
+            @click="$emit('toggle-menu')"
+        >
+            Sair
+        </router-link>
     </nav>
 </template>
 
 <script>
 export default {
-  name: 'nav-corp',
-  props: {
-    msg: String
-  }
+  name: 'nav-corp'
 }
 </script>
 
