@@ -3,7 +3,7 @@ import Home from "@/pages/Home.vue"
 import BadgeDiversificaJobs from "@/pages/BadgeDiversificaJobs.vue"
 import HowItWorks from "@/pages/HowItWorks.vue"
 import Login from "@/pages/Login.vue"
-import Perfil from "@/pages/Perfil.vue"
+import Profile from "@/pages/Profile.vue"
 import Register from "@/pages/Register.vue"
 import Roadmap from "@/pages/Roadmap.vue"
 import SuccessCases from "@/pages/SuccessCases.vue"
@@ -34,9 +34,9 @@ const routes = [
     component: Login,
   },
   {
-    path: "/perfil",
-    name: "perfil",
-    component: Perfil,
+    path: "/profile",
+    name: "profile",
+    component: Profile,
     props: { isUserLogged: true }
   },
   {
