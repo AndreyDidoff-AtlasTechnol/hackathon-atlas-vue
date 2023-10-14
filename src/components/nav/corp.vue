@@ -1,32 +1,56 @@
 <template>
     <nav>
         <ul>
-            <a href="roadmap">
-                <li>RoadMap</li>
-            </a>
-            <a href="trainings-corp">
+            <router-link
+                to="trainings-corp"
+                @click="$emit('toggle-menu')"
+            >
                 <li>Treinamentos</li>
-            </a>
-            <a href="vacancy">
+            </router-link>
+            <router-link
+                to="job-vacancy-registration"
+                @click="$emit('toggle-menu')"
+            >
                 <li>Cadastrar vaga</li>
-            </a>
-            <a href="vacancies">
+            </router-link>
+            <router-link
+                to="job-vacancy-list"
+                @click="$emit('toggle-menu')"
+            >
                 <li>Vagas</li>
-            </a>
+            </router-link>
         </ul>
-        <a href="home">
-            <button class="without-custom" type="button">
-                Sair
-            </button>
-        </a>
+        
+        <router-link
+            class="logout"
+            to="/"
+            @click="$emit('toggle-menu')"
+        >
+            Sair
+        </router-link>
     </nav>
 </template>
 
 <script>
 export default {
-  name: 'nav-corp',
-  props: {
-    msg: String
-  }
+  name: 'nav-corp'
 }
 </script>
+
+<style lang="scss" scoped>
+    .logout {
+        align-items: center;
+        background: #702FC2;
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+        color:#fff;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        font-weight: 600;
+        justify-content: center;
+        margin: 20px auto;
+        padding: 10px 20px;
+    }
+</style>

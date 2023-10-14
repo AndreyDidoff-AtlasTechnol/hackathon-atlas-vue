@@ -17,12 +17,12 @@
         <p>Juntos, estamos construindo um futuro onde o sucesso profissional não conhece limites e a diversidade é valorizada como uma força motriz para o crescimento e a inovação.</p>
         <p>Junte-se a nós nesta jornada em direção a carreiras mais brilhantes e a um mundo de possibilidades igualitárias.</p>
 
-        <button
+        <router-link
           class="cta"
-          type="button"
+          to="register"
         >
           Quero selo DiversificaJobs
-        </button>
+        </router-link>
 
         <h3 class="subtitle">Por que promover diversidade na sua empresa?</h3>
 
@@ -53,13 +53,13 @@
         <p>Em um mundo cada vez mais globalizado e diversificado, a habilidade de trabalhar eficazmente com pessoas de diferentes origens culturais, étnicas, de gênero, orientações sexuais e experiências de vida é essencial no ambiente de trabalho.</p>
         <p>Para promover a aceitação da diversidade em nossas equipes, implementamos um programa de mentoria que visa criar uma cultura de inclusão e respeito mútuo.</p>
       </div>
-
-      <button
+      
+      <router-link
         class="cta"
-        type="button"
+        to="register"
       >
         Quero selo DiversificaJobs
-      </button>
+      </router-link>
     </section>
 
     <div class="section purple" id="weFoundAJobForYou">
@@ -78,12 +78,13 @@
         <p>Junte-se a nós e faça seu próximo movimento com confiança!</p>
 
       </div>
-      <button
+      
+      <router-link
         class="cta"
-        type="button"
+        to="register"
       >
         Quero um job inclusivo!
-      </button>
+      </router-link>
     </div>
 
     <section class="section" id="postHiringFollowUp">
@@ -102,12 +103,13 @@
         <p>Seu sucesso é nossa prioridade constante. Estamos aqui para impulsionar o seu crescimento profissional.</p>
 
       </div>
-      <button
+      
+      <router-link
         class="cta"
-        type="button"
+        to="register"
       >
         Quero acompanhamento!
-      </button>
+      </router-link>
     </section>
 
     <section class="section purple" id="mentoringForYouToGrow">
@@ -122,12 +124,13 @@
         <p>No entanto, a diversidade deve começar desde o processo de recrutamento e seleção.</p>
         <p>Para ajudar nossos candidatos a receberem bem a diversidade e destacarem-se nos processos seletivos, oferecemos um programa de mentoria dedicado a essa temática.</p>
       </div>
-      <button
+      
+      <router-link
         class="cta"
-        type="button"
+        to="register"
       >
         Quero um mentor só pra mim!
-      </button>
+      </router-link>
     </section>
 
     <section class="section" id="trainings">
@@ -162,12 +165,13 @@
         <p>Desenvolver habilidades interpessoais: Refine sua comunicação, empatia e habilidades de escuta ativa para estabelecer relacionamentos de trabalho mais saudáveis e produtivos.</p>
         <p>Dominar o gerenciamento de equipe: Aprenda a motivar e apoiar sua equipe, identificando oportunidades de crescimento e desenvolvimento para cada membro. O sucesso começa com o cuidado com sua equipe.</p>
       </div>
-      <button
+      
+      <router-link
         class="cta"
-        type="button"
+        to="register"
       >
         Quero ser melhor!
-      </button>
+      </router-link>
     </section>
   </div>
 </template>

@@ -14,29 +14,12 @@
         DiversificaJobs
       </div>
 
-      <nav-corp v-if="isCorpLogged"></nav-corp>
-      <nav-user v-else-if="isUserLogged"></nav-user>
-      <nav-default v-else></nav-default>
+      <nav-corp v-if="isCorpLogged" @toggle-menu="toggleMenu"></nav-corp>
+      <nav-user v-else-if="isUserLogged" @toggle-menu="toggleMenu"></nav-user>
+      <nav-default v-else @toggle-menu="toggleMenu"></nav-default>
     </header>
     <router-view />
-    <footer>
-      <section class="section purple" id="companiesWithDiversificaJobsBadge">
-        <h2 class="title">Empresas com selo DiversificaJobs</h2>
-        <div class="content">
-          <img
-            :src="require('@/images/diversity_banner.png')"
-            alt="Banner diversidade para sua empresa"
-          />
-          <br/><br/>
-        </div>
-        <button
-          class="cta"
-          type="button"
-        >
-          Quero selo DiversificaJobs
-        </button>
-      </section>
-    </footer>
+    <footer-diversifica-jobs v-if="noShowFooter" :color="footerColor" />
   </main>
 </template>
 
@@ -44,23 +27,65 @@
 import navDefault from '@/components/nav/index'
 import navCorp from '@/components/nav/corp.vue'
 import navUser from '@/components/nav/user.vue'
+import FooterDiversificaJobs from './components/FooterDiversificaJobs.vue'
 
 export default {
   name: 'App',
-  props:{
-    isCorpLogged:{
-      type: Boolean,
-      default: false
-    },
-    isUserLogged:{
-      type: Boolean,
-      default: false
-    },
-  },
   components: {
+    FooterDiversificaJobs,
     navDefault,
     navCorp,
     navUser
+  },
+  computed: {
+    isCorpLogged() {
+      let route = this.$route.name
+
+      if(
+        route === 'job-vacancy-registration'
+        || route === 'trainings-corp'){
+        return true
+      }
+
+      return false
+    },
+    isUserLogged() {
+      let route = this.$route.name
+
+      if(
+        route === 'job-vacancy-list'
+        || route === 'job-vacancy-search'
+        || route === 'roadmap'
+        || route === 'profile'){
+        return true
+      }
+      return false
+    },
+    noShowFooter(){
+      let route = this.$route.name
+
+      if(
+        route === 'success-cases'
+        || route === 'login'
+        || route === 'register'
+        || route === 'profile'
+        || route === 'job-vacancy-search'
+        || route === 'job-vacancy-list'
+        || route === 'job-vacancy-registration'
+        || route === 'profile'){
+        return false
+      }
+      return true
+    },
+    footerColor(){
+      let route = this.$route.name
+
+      if(
+        route === 'badge-diversifica-jobs'){
+        return 'white'
+      }
+      return 'purple'
+    }
   },
   methods:{
     toggleMenu() {
@@ -96,11 +121,28 @@ a {
   color: inherit;
 }
 
-input, select {
+button {
+  background-transparent: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+input, select, textarea {
+  border: 2px solid #5A1CAE;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
   width: 100%;
-  height: 40px;
-  padding: 0 12px;
-  margin-bottom: 16px;
+}
+
+textarea {
+  max-width: 100%;
+  min-width: 100%;
+  height: 100px;
+  min-height: 100px;
+  max-height: 200px;
 }
 
 h2{
@@ -119,28 +161,16 @@ h3 {
   font-weight: 600;
 }
 
-button {
-  align-items: center;
-  background: #702FC2;
-  border-radius: 10px;
-  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
-  color:#fff;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 10px 20px;
-}
-
 header {
   min-height: 64px;
   padding: 12px 24px;
   background-color: #702FC2;
-  position: relative;
+  position: sticky;
   display: flex;
   gap: 40px;
   justify-content: center;
   align-items: center;
+  top: 0;
 
   .logo {
     width: 120px;
@@ -163,6 +193,8 @@ header {
     overflow: hidden;
     cursor: pointer;
     z-index: 9999;
+    background: none;
+    border: none;
 
     @media (min-width: 960px) {
       display: none;
@@ -337,9 +369,19 @@ header {
   }
   
   .cta {
+    align-items: center;
+    background: #702FC2;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    color:#fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
     font-size: 18px;
     font-weight: 600;
+    justify-content: center;
     margin: 20px auto;
+    padding: 10px 20px;
   }
 
   &.purple {
