@@ -11,6 +11,7 @@ import Trainings from "@/pages/Trainings.vue"
 import TrainingsCorp from "@/pages/TrainingsCorp.vue"
 import Vacancies from "@/pages/Vacancies.vue"
 import Vacancy from "@/pages/Vacancy.vue"
+import JobVacancyRegistration from "@/pages/JobVacancyRegistration.vue"
 
 const routes = [
   {
@@ -45,7 +46,7 @@ const routes = [
     component: Register,
   },
   {
-    path: "/Roadmap",
+    path: "/roadmap",
     name: "Roadmap",
     component: Roadmap,
     props: { isUserLogged: true }
@@ -77,6 +78,12 @@ const routes = [
     path: "/vacancy",
     name: "vacancy",
     component: Vacancy,
+    props: { isCorpLogged: true }
+  },
+  {
+    path: '/job-vacancy-registration',
+    name: 'job-vacancy-registration',
+    component: JobVacancyRegistration,
     props: { isCorpLogged: true }
   }
 ]
