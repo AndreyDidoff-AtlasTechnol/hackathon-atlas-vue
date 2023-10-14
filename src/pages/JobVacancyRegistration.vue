@@ -16,15 +16,15 @@
       <input type="text" placeholder="Tecnologias..." />
 
       <input type="text" placeholder="Valor da vaga..." />
-
-      <button
-        type="button"
-        style="margin-bottom: 12px"
+      
+      <router-link
+        class="cta"
+        to="job-vacancy-list"
       >
         Cadastrar
-      </button>
+      </router-link>
 
-      <router-link to="/">
+      <router-link to="trainings-corp">
         Voltar
       </router-link>
     </form>
@@ -37,3 +37,9 @@ export default {
   name: 'job-vacancy-registration'
 }
 </script>
+
+<style lang="scss" scoped>
+  .cta{
+      margin-top: 0;
+    }
+</style>

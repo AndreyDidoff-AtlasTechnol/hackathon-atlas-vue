@@ -12,6 +12,7 @@ import TrainingsCorp from "@/pages/TrainingsCorp.vue"
 import JobVacancyList from "@/pages/JobVacancyList.vue"
 import JobVacancySearch from "@/pages/JobVacancySearch.vue"
 import JobVacancyRegistration from "@/pages/JobVacancyRegistration.vue"
+import Mentoring from "@/pages/Mentoring.vue"
 
 const routes = [
   {
@@ -84,6 +85,12 @@ const routes = [
     path: '/job-vacancy-registration',
     name: 'job-vacancy-registration',
     component: JobVacancyRegistration,
+    props: { isCorpLogged: true }
+  },
+  {
+    path: '/mentoring',
+    name: 'mentoring',
+    component: Mentoring,
     props: { isCorpLogged: true }
   }
 ]

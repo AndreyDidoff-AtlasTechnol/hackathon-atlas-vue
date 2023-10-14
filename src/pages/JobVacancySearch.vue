@@ -15,14 +15,14 @@
 
         <input type="text" placeholder="Valor da vaga..." />
 
-        <button
-          type="button"
-          style="margin-bottom: 12px"
+        <router-link
+          class="cta"
+          to="job-vacancy-list"
         >
           Procurar
-        </button>
+        </router-link>
 
-        <router-link to="/">
+        <router-link to="trainings">
           Voltar
         </router-link>
       </form>
@@ -35,3 +35,9 @@ export default {
   name: 'job-vacancy-search',
 }
 </script>
+
+<style lang="scss" scoped>
+  .cta{
+      margin-top: 0;
+    }
+</style>

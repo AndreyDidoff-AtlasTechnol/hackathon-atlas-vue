@@ -72,7 +72,6 @@ export default {
   },
   methods:{
     setIsCorp(event){
-      console.log(event.target.value)
       let value = event.target.value
       this.isCorp = (value == 'company' ? true : false);
     }

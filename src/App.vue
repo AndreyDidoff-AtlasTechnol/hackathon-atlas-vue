@@ -81,6 +81,13 @@ a {
   color: inherit;
 }
 
+button {
+  background-transparent: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 input, select, textarea {
   border: 2px solid #5A1CAE;
   border-radius: 8px;
