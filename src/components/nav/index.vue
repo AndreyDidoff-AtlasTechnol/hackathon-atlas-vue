@@ -1,23 +1,44 @@
 <template>
     <nav>
         <ul>
-            <router-link to="/">
+            <router-link
+                to="/"
+                @click="$emit('toggle-menu')"
+            >
                 <li>Início</li>
             </router-link>
-            <router-link to="trainings">
+            <router-link
+                to="trainings"
+                @click="$emit('toggle-menu')"
+            >
                 <li>Treinamentos</li>
             </router-link>
-            <router-link to="how-it-works">
+            <router-link
+                to="how-it-works"
+                @click="$emit('toggle-menu')"
+            >
                 <li>Como funciona?</li>
             </router-link>
-            <router-link to="success-cases">
+            <router-link
+                to="success-cases"
+                @click="$emit('toggle-menu')"
+            >
                 <li>Cases de sucesso</li>
             </router-link>
-            <router-link to="badge-diversifica-jobs">
+            <router-link
+                to="badge-diversifica-jobs"
+                @click="$emit('toggle-menu')"
+            >
                 <li>Selo DiversificaJobs</li>
             </router-link>
         </ul>
-        <router-link class="login" to="login">Quero entrar</router-link>
+        <router-link
+            class="login"
+            to="login"
+            @click="$emit('toggle-menu')"
+        >
+            Quero entrar
+        </router-link>
     </nav>
 </template>
 

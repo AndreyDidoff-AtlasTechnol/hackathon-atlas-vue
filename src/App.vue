@@ -14,9 +14,9 @@
         DiversificaJobs
       </div>
 
-      <nav-corp v-if="isCorpLogged"></nav-corp>
-      <nav-user v-else-if="isUserLogged"></nav-user>
-      <nav-default v-else></nav-default>
+      <nav-corp v-if="isCorpLogged" @toggle-menu="toggleMenu"></nav-corp>
+      <nav-user v-else-if="isUserLogged" @toggle-menu="toggleMenu"></nav-user>
+      <nav-default v-else @toggle-menu="toggleMenu"></nav-default>
     </header>
     <router-view />
     <footer-diversifica-jobs />

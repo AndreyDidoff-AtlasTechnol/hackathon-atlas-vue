@@ -1,20 +1,38 @@
 <template>
     <nav>
         <ul>
-            <router-link to="roadmap">
+            <router-link
+                to="roadmap"
+                @click="$emit('toggle-menu')"
+            >
                 <li>RoadMap</li>
             </router-link>
-            <router-link to="trainings">
+            <router-link
+                to="trainings"
+                @click="$emit('toggle-menu')"
+            >
                 <li>Treinamentos</li>
             </router-link>
-            <router-link to="vacancies">
+            <router-link
+                to="vacancies"
+                @click="$emit('toggle-menu')"
+            >
                 <li>Vagas</li>
             </router-link>
-            <router-link to="Perfil">
+            <router-link
+                to="Perfil"
+                @click="$emit('toggle-menu')"
+            >
                 <li>Perfil</li>
             </router-link>
         </ul>
-        <router-link class="logout" to="home">Sair</router-link>
+        <router-link
+            class="logout"
+            to="home"
+            @click="$emit('toggle-menu')"
+        >
+            Sair
+        </router-link>
     </nav>
 </template>
 
