@@ -19,24 +19,7 @@
       <nav-default v-else></nav-default>
     </header>
     <router-view />
-    <footer>
-      <section class="section purple" id="companiesWithDiversificaJobsBadge">
-        <h2 class="title">Empresas com selo DiversificaJobs</h2>
-        <div class="content">
-          <img
-            :src="require('@/images/diversity_banner.png')"
-            alt="Banner diversidade para sua empresa"
-          />
-          <br/><br/>
-        </div>
-        <button
-          class="cta"
-          type="button"
-        >
-          Quero selo DiversificaJobs
-        </button>
-      </section>
-    </footer>
+    <footer-diversifica-jobs />
   </main>
 </template>
 
@@ -44,6 +27,7 @@
 import navDefault from '@/components/nav/index'
 import navCorp from '@/components/nav/corp.vue'
 import navUser from '@/components/nav/user.vue'
+import FooterDiversificaJobs from './components/FooterDiversificaJobs.vue'
 
 export default {
   name: 'App',
@@ -58,6 +42,7 @@ export default {
     },
   },
   components: {
+    FooterDiversificaJobs,
     navDefault,
     navCorp,
     navUser
