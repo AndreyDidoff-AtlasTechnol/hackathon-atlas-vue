@@ -58,3 +58,16 @@ export default {
   name: 'register'
 }
 </script>
+
+<style lang="scss" scoped>
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  background-color: #702FC2;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 15px;
+  color: #FFF;
+}
+</style>
