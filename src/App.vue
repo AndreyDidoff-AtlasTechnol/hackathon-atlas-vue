@@ -19,7 +19,7 @@
       <nav-default v-else @toggle-menu="toggleMenu"></nav-default>
     </header>
     <router-view />
-    <footer-diversifica-jobs />
+    <footer-diversifica-jobs v-if="noShowFooter" />
   </main>
 </template>
 
@@ -60,6 +60,23 @@ export default {
         return true
       }
       return false
+    },
+    noShowFooter(){
+      let route = this.$route.name
+
+      if(
+        route === 'success-cases'
+        || route === 'login'
+        || route === 'register'
+        || route === 'profile'
+        || route === 'job-vacancy-search'
+        || route === 'job-vacancy-list'
+        || route === 'job-vacancy-registration'
+        || route === 'profile'){
+        return false
+      }
+      return true
+
     }
   },
   methods:{

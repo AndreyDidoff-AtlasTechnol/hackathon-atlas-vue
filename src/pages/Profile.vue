@@ -1,6 +1,5 @@
 <template>
   <section class="section">
-  <h2 class="title">Perfil</h2>
   <div class="content">
     <div class="personal-data">
       <img src="@/images/photoPeople/person_1.png" alt="Profile picture" />
@@ -11,13 +10,13 @@
     </div>
 
     <div class="info">
-      <p>Resumo:</p>
-      Meu nome é Jorge Alex, e sou um apaixonado desenvolvedor Front-End especializado em Vue.js. Minha jornada no mundo da programação começou com a curiosidade de entender como as coisas funcionavam na web. Rapidamente, me apaixonei pelo processo de transformar conceitos criativos em interfaces funcionais e atraentes
+      <span>Resumo:</span>
+      <p>Meu nome é Jorge Alex, e sou um apaixonado desenvolvedor Front-End especializado em Vue.js. Minha jornada no mundo da programação começou com a curiosidade de entender como as coisas funcionavam na web. Rapidamente, me apaixonei pelo processo de transformar conceitos criativos em interfaces funcionais e atraentes</p>
     </div>
 
     <div class="info">
-      <p>Hard-skill:</p>
-      <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
+      <span>Hard-skill:</span>
+      <div class="info__skills" style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
         <img src="@/images/icons/js.png" alt="Logomarca JS" />
         <img src="@/images/icons/css.png" alt="Logomarca CSS" />
         <img src="@/images/icons/html.png" alt="Logomarca HTML" />
@@ -27,25 +26,20 @@
     </div>
 
     <div class="info">
-      <p>Soft-skill:</p>
-      Front-end com foco em Vue.Js
-      <br />
-      Front-end com foco em Vue.Js
-      <br />
-      Front-end com foco em Vue.Js
-      <br />
-      Front-end com foco em Vue.Js
-      <br />
-      Front-end com foco em Vue.Js
-      <br />
-      Front-end com foco em Vue.Js
+      <span>Soft-skill:</span>
+      <p>Front-end com foco em Vue.Js</p>
+      <p>Front-end com foco em Vue.Js</p>
+      <p>Front-end com foco em Vue.Js</p>
+      <p>Front-end com foco em Vue.Js</p>
+      <p>Front-end com foco em Vue.Js</p>
+      <p>Front-end com foco em Vue.Js</p>
     </div>
   </div>
   <button
     class="cta"
     type="button"
   >
-    Quero contratar
+    Quero contratar o Jorge Alex
   </button>
 </section>
 </template>
@@ -57,6 +51,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.content{
+  margin: 0;
+}
 .personal-data {
   width: 100%;
   max-width: 400px;
@@ -77,7 +74,6 @@ export default {
       font-size: 24px;
       font-weight: 600;
       color: #702FC2;
-      margin-bottom: 8px;
     }
 
     span {
@@ -85,15 +81,39 @@ export default {
       font-size: 16px;
       font-weight: 400;
     }
+
+    p{
+      font-size: 16px;
+      text-align: left;
+    }
   }
 }
 
 .info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   text-align: left;
 
-  p {
+  p,span {
     text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  span {
     color: #702FC2;
   }
+
+  &__skills{
+    align-items: center;
+    display: flex;
+    gap: 12px;
+  }
+}
+.cta{
+  margin-bottom: 0;
+  margin-top: 40px;
+  width: 100%;
 }
 </style>
