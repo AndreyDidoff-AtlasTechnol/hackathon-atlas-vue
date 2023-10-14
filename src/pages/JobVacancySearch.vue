@@ -10,7 +10,21 @@
           <option value="3">Afirmativa mulheres</option>
           <option value="4">Todos</option>
         </select>
-        <textarea required></textarea>
+
+        <input type="text" placeholder="Tecnologias..." />
+
+        <input type="text" placeholder="Valor da vaga..." />
+
+        <button
+          type="button"
+          style="margin-bottom: 12px"
+        >
+          Procurar
+        </button>
+
+        <router-link to="/">
+          Voltar
+        </router-link>
       </form>
     </div>
   </section>
@@ -18,6 +32,6 @@
 
 <script>
 export default {
-  name: 'vacancy',
+  name: 'job-vacancy',
 }
 </script>
