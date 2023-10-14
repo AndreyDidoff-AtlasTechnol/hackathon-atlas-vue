@@ -34,7 +34,7 @@
         </ul>
         <router-link
             class="login"
-            to="login"
+            to="register"
             @click="$emit('toggle-menu')"
         >
             Quero entrar
