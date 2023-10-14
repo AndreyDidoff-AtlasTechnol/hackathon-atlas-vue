@@ -2,7 +2,25 @@
   <section class="section">
   <h2 class="title">Cases de Sucesso</h2>
   <div class="content">
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    <h3 class="subtitle">Job inclusivo que deu certo</h3>
+    <div class="cards">
+      <div>
+        <img src="@/images/photoPeople/person_1.png" alt="Success case image">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+      </div>
+      <div>
+        <img src="@/images/photoPeople/person_2.png" alt="Success case image">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+      </div>
+      <div>
+        <img src="@/images/photoPeople/person_3.png" alt="Success case image">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+      </div>
+      <div>
+        <img src="@/images/photoPeople/person_4.png" alt="Success case image">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+      </div>
+    </div>
   </div>
 </section>
 </template>
@@ -12,3 +30,20 @@ export default {
   name: 'success-cases',
 }
 </script>
+
+<style lang="scss" scoped>
+.cards{
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+
+  @media (min-width: 450px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  div img {
+    margin-bottom: 16px;
+  }
+}
+</style>

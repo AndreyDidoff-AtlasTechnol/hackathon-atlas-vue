@@ -20,9 +20,9 @@
         Entrar
       </button>
 
-      <a href="register">
+      <router-link to="register">
         Quero me cadastrar
-      </a>
+      </router-link>
     </form>
   </div>
 </section>

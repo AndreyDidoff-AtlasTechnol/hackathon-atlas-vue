@@ -1,22 +1,20 @@
 <template>
     <nav>
         <ul>
-            <a href="roadmap">
+            <router-link to="roadmap">
                 <li>RoadMap</li>
-            </a>
-            <a href="trainings">
+            </router-link>
+            <router-link to="trainings">
                 <li>Treinamentos</li>
-            </a>
-            <a href="vacancies">
+            </router-link>
+            <router-link to="vacancies">
                 <li>Vagas</li>
-            </a>
-            <a href="Perfil">
+            </router-link>
+            <router-link to="Perfil">
                 <li>Perfil</li>
-            </a>
+            </router-link>
         </ul>
-        <a class="login" href="home">
-            Sair
-        </a>
+        <router-link class="logout" to="home">Sair</router-link>
     </nav>
 </template>
 
@@ -27,7 +25,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .login {
+    .logout {
         align-items: center;
         background: #702FC2;
         border-radius: 10px;
