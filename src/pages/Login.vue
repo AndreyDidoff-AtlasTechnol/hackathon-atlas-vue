@@ -40,7 +40,7 @@ export default {
   },
   computed:{
     getUrl(){
-      return this.isCorp ?'trainings-corp':'trainings'
+      return this.isCorp ?'trainings-corp':'roadmap'
     }
   },
   methods:{
